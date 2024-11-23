@@ -9,14 +9,13 @@
 <body>
   <header class="header">
     <div class="logo-container">
-      <img src="uoft-logo.png" alt="University of Toronto Logo" class="logo">
+      <img src="https://www.s3.amazonaws.com/your-logo-url/uoft-logo.png" alt="University of Toronto Logo" class="logo">
     </div>
     <h1>UofT Food Order</h1>
     <nav>
       <ul>
         <li><a href="#menu">Menu</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#about">About</a></li>
+        <li><a href="#cart">Cart (<span id="cart-count">0</span>)</a></li>
       </ul>
     </nav>
   </header>
@@ -24,6 +23,7 @@
   <section class="categories">
     <h2>Choose Your Meal</h2>
     <div class="category">
+      <h3>Breakfast</h3>
     </div>
     <div class="category">
       <h3>Lunch</h3>
@@ -35,26 +35,20 @@
 
   <section id="menu" class="menu">
     <h2>Menu</h2>
-    <div class="menu-item">
-      <h3>Egg Sandwich</h3>
-      <span>$5.99</span>
-      <button>Add to Cart</button>
-    </div>
-    <div class="menu-item">
-      <h3>Chicken Salad</h3>
-      <span>$8.99</span>
-      <button>Add to Cart</button>
-    </div>
-    <div class="menu-item">
-      <h3>Pasta</h3>
-      <span>$10.99</span>
-      <button>Add to Cart</button>
-    </div>
+    <div class="menu-items" id="menu-items"></div>
+  </section>
+
+  <section id="cart" class="cart">
+    <h2>Your Cart</h2>
+    <ul id="cart-list"></ul>
+    <button id="checkout-button">Checkout</button>
   </section>
 
   <footer id="contact">
     <p>Contact Us: uoft-food@university.com</p>
     <p>&copy; 2024 University of Toronto</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
