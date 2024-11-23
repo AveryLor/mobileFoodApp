@@ -11,7 +11,7 @@
   }
   
   header {
-    background-color: #0072CE;
+    background-color: #1E3765;
     color: white;
     padding: 10px 20px;
     text-align: center;
@@ -84,11 +84,11 @@
   
   .menu-item span {
     font-weight: bold;
-    color: #0072CE;
+    color: #1E3765;
   }
   
   .menu-item button {
-    background-color: #0072CE;
+    background-color: #1E3765;
     color: white;
     border: none;
     padding: 10px 15px;
@@ -97,11 +97,11 @@
   }
   
   .menu-item button:hover {
-    background-color: #005fa3;
+    background-color: #1E3765;
   }
   
   footer {
-    background-color: #0072CE;
+    background-color: #1E3765;
     color: white;
     text-align: center;
     padding: 10px 0;
