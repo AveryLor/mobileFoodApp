@@ -22,11 +22,15 @@
   
   .logo-container {
     flex-shrink: 0;
+    display: flex;
+    justify-content: center; /* Centers the logo horizontally */
+    align-items: center;     /* Centers the logo vertically */
   }
   
   .logo {
     width: 40px; /* Adjust as needed */
     height: auto;
+    justify-content: center; /* Centers the logo horizontally */
   }
   
   header h1 {
