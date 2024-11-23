@@ -1,3 +1,6 @@
+/* Add Google Fonts for a more professional text style */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;500&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -5,7 +8,7 @@
   }
   
   body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif; /* Use Roboto for body text */
     background-color: #f4f4f4;
     color: #333;
     display: flex;

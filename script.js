@@ -1,7 +1,7 @@
 // Sample products (you can replace this with an API or database)
 const products = [
-    { id: 1, name: "Egg Sandwich", description: "A delicious egg sandwich with cheese and vegetables.", price: 5.99 },
-    { id: 2, name: "Chicken Salad", description: "A fresh chicken salad with dressing on the side.", price: 8.99 },
+    { id: 1, name: "Pasta", description: "Classic pasta with marinara sauce and cheese.", price: 10.99 },
+    { id: 2, name: "Pasta", description: "Classic pasta with marinara sauce and cheese.", price: 10.99 },
     { id: 3, name: "Pasta", description: "Classic pasta with marinara sauce and cheese.", price: 10.99 },
     { id: 4, name: "Pasta", description: "Classic pasta with marinara sauce and cheese.", price: 10.99 },
     { id: 5, name: "Pasta", description: "Classic pasta with marinara sauce and cheese.", price: 10.99 },
