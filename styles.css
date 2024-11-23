@@ -6,12 +6,6 @@
     padding: 0;
     box-sizing: border-box;
   }
-
-  html,body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
   
   body {
     font-family: 'Roboto', sans-serif; /* Use Roboto for body text */
@@ -22,11 +16,13 @@
     align-items: center;
     justify-content: flex-start;
     min-height: 100vh;
-    background-image: url('uoftpic.png'); /* Replace with the path to your image */
-    background-size: cover; /* Ensures the image covers the entire background */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Ensures the image doesn't repeat */
-    background-attachment: fixed;
+    background-image: url('LeadImage.jpg'); /* Make sure the URL is correct */
+    background-size: cover; /* Ensures the image covers the whole page */
+    background-position: center center; /* Centers the image */
+    background-attachment: fixed; /* Keeps the image fixed during scrolling */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+
+
     
   }
   
@@ -221,10 +217,9 @@
     text-align: center;
     padding: 10px 0;
     width: 100%; /* Ensures the footer spans the full width */
-    position: absolute; /* Optional: makes the footer stay at the bottom */
-    bottom: 0; /* Optional: aligns the footer at the bottom */
-    margin-top: auto; 
+    margin-top: auto; /* Pushes the footer to the bottom of the page */
   }
+  
   
   @media (max-width: 768px) {
     .category {
