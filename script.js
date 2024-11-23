@@ -1,12 +1,65 @@
 // Sample products (you can replace this with an API or database)
 const products = [
-    { id: 1, name: "Pasta", description: "Classic pasta with marinara sauce and cheese.", price: 10.99 },
-    { id: 2, name: "Pasta", description: "Classic pasta with marinara sauce and cheese.", price: 10.99 },
-    { id: 3, name: "Pasta", description: "Classic pasta with marinara sauce and cheese.", price: 10.99 },
-    { id: 4, name: "Pasta", description: "Classic pasta with marinara sauce and cheese.", price: 10.99 },
-    { id: 5, name: "Pasta", description: "Classic pasta with marinara sauce and cheese.", price: 10.99 },
-    { id: 6, name: "Pasta", description: "Classic pasta with marinara sauce and cheese.", price: 10.99 },
-    { id: 7, name: "Pasta", description: "Classic pasta with marinara sauce and cheese.", price: 10.99 }
+  {
+    id: 1,
+    name: "Pasta",
+    description: "Classic pasta with marinara sauce and cheese.",
+    price: 10.99
+  },
+  {
+    id: 2,
+    name: "Burger",
+    description: "Juicy beef burger with lettuce, tomato, and cheese.",
+    price: 12.49
+  },
+  {
+    id: 3,
+    name: "Caesar Salad",
+    description: "Crisp romaine lettuce with creamy Caesar dressing.",
+    price: 8.99
+  },
+  {
+    id: 4,
+    name: "Grilled Chicken",
+    description: "Perfectly seasoned grilled chicken breast with a side of veggies.",
+    price: 14.99
+  },
+  {
+    id: 5,
+    name: "Pizza",
+    description: "Wood-fired pizza topped with mozzarella, basil, and tomato sauce.",
+    price: 11.99
+  },
+  {
+    id: 6,
+    name: "Sushi Platter",
+    description: "Fresh sushi rolls served with wasabi and soy sauce.",
+    price: 16.99
+  },
+  {
+    id: 7,
+    name: "Tacos",
+    description: "Three soft tacos with your choice of chicken, beef, or veggies.",
+    price: 9.49
+  },
+  {
+    id: 8,
+    name: "Fries",
+    description: "Golden, oily, salty fries.",
+    price: 6.99
+  },
+  {
+    id: 9,
+    name: "Veggie Wrap",
+    description: "A healthy wrap filled with fresh vegetables and hummus.",
+    price: 7.99
+  },
+  {
+    id: 10,
+    name: "Fish and Chips",
+    description: "Crispy fried fish served with golden fries and tartar sauce.",
+    price: 13.49
+  }
   ];
   
   // Function to render products
