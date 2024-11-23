@@ -1,5 +1,3 @@
-# mobileFoodApp
-yuh
 # 🍴 UofT Food Order
 
 A simple and responsive food ordering web application designed for the University of Toronto community.
