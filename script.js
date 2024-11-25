@@ -1,98 +1,216 @@
-// Sample products (you can replace this with an API or database)
-const products = [
-  {
-    id: 1,
-    name: "Pasta",
-    description: "Classic pasta with marinara sauce and cheese.",
-    price: 10.99,
-  },
-  {
-    id: 2,
-    name: "Burger",
-    description: "Juicy beef burger with lettuce, tomato, and cheese.",
-    price: 12.49,
-  },
-  {
-    id: 3,
-    name: "Caesar Salad",
-    description: "Crisp romaine lettuce with creamy Caesar dressing.",
-    price: 8.99,
-  },
-  {
-    id: 4,
-    name: "Grilled Chicken",
-    description:
-      "Perfectly seasoned grilled chicken breast with a side of veggies.",
-    price: 14.99,
-  },
-  {
-    id: 5,
-    name: "Pizza",
-    description:
-      "Wood-fired pizza topped with mozzarella, basil, and tomato sauce.",
-    price: 11.99,
-  },
-  {
-    id: 6,
-    name: "Sushi Platter",
-    description: "Fresh sushi rolls served with wasabi and soy sauce.",
-    price: 16.99,
-  },
-  {
-    id: 7,
-    name: "Tacos",
-    description:
-      "Three soft tacos with your choice of chicken, beef, or veggies.",
-    price: 9.49,
-  },
-  {
-    id: 8,
-    name: "Fries",
-    description: "Golden, oily, salty fries.",
-    price: 6.99,
-  },
-  {
-    id: 9,
-    name: "Veggie Wrap",
-    description: "A healthy wrap filled with fresh vegetables and hummus.",
-    price: 7.99,
-  },
-  {
-    id: 10,
-    name: "Fish and Chips",
-    description: "Crispy fried fish served with golden fries and tartar sauce.",
-    price: 13.49,
-  },
-];
+// Sample product data for different restaurants
+const restaurantMenus = {
+  A: [
+    {
+      id: 1,
+      name: "Pasta",
+      description: "Classic pasta with marinara sauce and cheese.",
+      price: 10.99,
+    },
+    {
+      id: 2,
+      name: "Burger",
+      description: "Juicy beef burger with lettuce, tomato, and cheese.",
+      price: 12.49,
+    },
+    {
+      id: 3,
+      name: "Caesar Salad",
+      description: "Crisp romaine lettuce with creamy Caesar dressing.",
+      price: 8.99,
+    },
+    {
+      id: 4,
+      name: "Pasta",
+      description: "Classic pasta with marinara sauce and cheese.",
+      price: 10.99,
+    },
+    {
+      id: 5,
+      name: "Burger",
+      description: "Juicy beef burger with lettuce, tomato, and cheese.",
+      price: 12.49,
+    },
+    {
+      id: 6,
+      name: "Caesar Salad",
+      description: "Crisp romaine lettuce with creamy Caesar dressing.",
+      price: 8.99,
+    },
+    {
+      id: 7,
+      name: "Pasta",
+      description: "Classic pasta with marinara sauce and cheese.",
+      price: 10.99,
+    },
+    {
+      id: 8,
+      name: "Burger",
+      description: "Juicy beef burger with lettuce, tomato, and cheese.",
+      price: 12.49,
+    },
+    {
+      id: 9,
+      name: "Caesar Salad",
+      description: "Crisp romaine lettuce with creamy Caesar dressing.",
+      price: 8.99,
+    },
+  ],
+  B: [
+    {
+      id: 11,
+      name: "Spaghetti Carbonara",
+      description:
+        "Classic Italian pasta with eggs, cheese, pancetta, and pepper.",
+      price: 13.99,
+    },
+    {
+      id: 12,
+      name: "Cheeseburger Deluxe",
+      description:
+        "Grilled beef patty topped with cheddar, lettuce, tomato, and pickles.",
+      price: 14.49,
+    },
+    {
+      id: 13,
+      name: "Greek Salad",
+      description:
+        "Crisp romaine lettuce, feta cheese, olives, and cucumbers with Greek dressing.",
+      price: 9.99,
+    },
+    {
+      id: 14,
+      name: "Vegetable Lasagna",
+      description:
+        "Layers of pasta, ricotta cheese, marinara sauce, and roasted vegetables.",
+      price: 12.99,
+    },
+    {
+      id: 15,
+      name: "BBQ Bacon Burger",
+      description:
+        "Beef patty with crispy bacon, barbecue sauce, and melted cheese.",
+      price: 15.99,
+    },
+    {
+      id: 16,
+      name: "Caesar Salad Wrap",
+      description:
+        "A wrap filled with romaine lettuce, grilled chicken, and Caesar dressing.",
+      price: 11.49,
+    },
+  ],
+  C: [
+    {
+      id: 17,
+      name: "Lamb Shawarma",
+      description:
+        "Tender lamb slices wrapped in flatbread with garlic sauce and vegetables.",
+      price: 16.99,
+    },
+    {
+      id: 18,
+      name: "Buffalo Wings",
+      description:
+        "Crispy chicken wings tossed in spicy buffalo sauce, served with ranch dipping sauce.",
+      price: 12.49,
+    },
+    {
+      id: 19,
+      name: "Eggplant Parmesan",
+      description:
+        "Breaded eggplant topped with marinara sauce and melted mozzarella cheese.",
+      price: 14.99,
+    },
+    {
+      id: 20,
+      name: "Beef Burritos",
+      description:
+        "Flour tortillas filled with seasoned beef, cheese, and fresh salsa.",
+      price: 11.99,
+    },
+    {
+      id: 21,
+      name: "Chicken Tikka Masala",
+      description:
+        "Chicken cooked in a rich and creamy tomato-based sauce with spices.",
+      price: 15.49,
+    },
+    {
+      id: 22,
+      name: "Mushroom Risotto",
+      description:
+        "Creamy risotto with sautéed mushrooms, Parmesan cheese, and white wine.",
+      price: 13.99,
+    },
+    {
+      id: 23,
+      name: "Falafel Wrap",
+      description:
+        "Crispy falafel balls with tahini sauce, lettuce, and tomatoes wrapped in pita bread.",
+      price: 10.99,
+    },
+    {
+      id: 24,
+      name: "Shrimp Scampi",
+      description:
+        "Shrimp sautéed in garlic butter and lemon sauce, served over linguine.",
+      price: 18.49,
+    },
+    {
+      id: 25,
+      name: "BBQ Ribs",
+      description:
+        "Tender, slow-cooked ribs smothered in barbecue sauce and served with coleslaw.",
+      price: 21.99,
+    },
+    {
+      id: 26,
+      name: "Veggie Sushi Rolls",
+      description:
+        "Rice and nori wrapped with fresh vegetables, served with soy sauce and wasabi.",
+      price: 9.49,
+    },
+  ],
+};
 
-// Function to render products
-function renderProducts() {
+function renderProducts(restaurant) {
   const menuItemsContainer = document.getElementById("menu-items");
   menuItemsContainer.innerHTML = ""; // Clear any existing products
 
-  products.forEach((product) => {
+  const menu = restaurantMenus[restaurant] || [];
+
+  menu.forEach((product) => {
     const productElement = document.createElement("div");
     productElement.classList.add("menu-item");
 
+    // Adding the "Add to Cart" button with onclick event to add the item to the cart
     productElement.innerHTML = `
-        <h3>${product.name}</h3>
-        <p>${product.description}</p>
-        <span>$${product.price.toFixed(2)}</span>
-        <button onclick="addToCart(${product.id})">Add to Cart</button>
-      `;
+      <h3>${product.name}</h3>
+      <p>${product.description}</p>
+      <span>$${product.price.toFixed(2)}</span>
+      <button onclick="addToCart(${product.id})">Add to Cart</button>
+    `;
 
     menuItemsContainer.appendChild(productElement);
   });
 }
 
-// Cart functionality
+/// Cart functionality
 let cart = [];
 
 function addToCart(productId) {
-  const product = products.find((p) => p.id === productId);
+  // Get the currently selected restaurant (from the UI or stored data)
+  const restaurant = document
+    .querySelector(".category.selected")
+    ?.id.split("-")[1];
+
+  // Find the product in the selected restaurant's menu
+  const product = restaurantMenus[restaurant]?.find((p) => p.id === productId);
+
   if (product) {
-    cart.push(product);
-    updateCart();
+    cart.push(product); // Add the product to the cart
+    updateCart(); // Update the cart display
   }
 }
 
@@ -111,5 +229,56 @@ function updateCart() {
   cartCount.textContent = cart.length;
 }
 
-// Initial render
-renderProducts();
+// Checkout functionality
+function checkout() {
+  if (cart.length > 0) {
+    // Simulate sending an email with a randomly generated number
+    const randomNumber = Math.floor(Math.random() * 1000000); // Random number for the email
+    alert(
+      `Your order has been placed. Check your email for confirmation number: ${randomNumber}`
+    );
+
+    // Clear the cart after checkout
+    cart = [];
+    updateCart();
+  } else {
+    alert(
+      "Your cart is empty. Please add some items to the cart before checkout."
+    );
+  }
+}
+
+// Default restaurant to display menu for (Restaurant A)
+function selectRestaurant(restaurant) {
+  // Remove 'selected' class from all categories
+  document
+    .querySelectorAll(".category")
+    .forEach((cat) => cat.classList.remove("selected"));
+
+  // Add 'selected' class to clicked category
+  document
+    .getElementById(`restaurant-${restaurant.toLowerCase()}-btn`)
+    .parentElement.classList.add("selected");
+
+  // Render menu for selected restaurant
+  renderProducts(restaurant);
+}
+
+// Initial render with Restaurant A's menu
+selectRestaurant("A");
+
+// Event listeners for switching menus
+document.getElementById("restaurant-a-btn").addEventListener("click", () => {
+  selectRestaurant("A");
+});
+
+document.getElementById("restaurant-b-btn").addEventListener("click", () => {
+  selectRestaurant("B");
+});
+
+document.getElementById("restaurant-c-btn").addEventListener("click", () => {
+  selectRestaurant("C");
+});
+
+// Checkout button
+document.getElementById("checkout-button").addEventListener("click", checkout);
