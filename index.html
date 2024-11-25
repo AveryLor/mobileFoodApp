@@ -1,58 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>UofT Food Order</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="images/uoft-logo.png">
-
-</head>
-<body>
-  <header class="header">
-    <div class="header-content">
-      <div class="logo-container">
-        <img src="images/uoft-logo.png" alt="University of Toronto Logo" class="logo">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UofT Food Order</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="images/uoft-logo.png" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-content">
+        <div class="logo-container">
+          <img
+            src="images/uoft-logo.png"
+            alt="University of Toronto Logo"
+            class="logo"
+          />
+        </div>
+        <h1>UofT Food Order</h1>
       </div>
-      <h1>UofT Food Order</h1>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="#menu">Menu</a></li>
-        <li><a href="#cart">Cart (<span id="cart-count">0</span>)</a></li>
-      </ul>
-    </nav>
-  </header>
+      <nav>
+        <ul>
+          <li><a href="#menu">Menu</a></li>
+          <li>
+            <a href="#cart">Cart (<span id="cart-count">0</span>)</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-  <section class="categories">
-    <h2>Choose Your Meal</h2>
-    <div class="category">
-      <h3>Breakfast</h3>
-    </div>
-    <div class="category">
-      <h3>Lunch</h3>
-    </div>
-    <div class="category">
-      <h3>Dinner</h3>
-    </div>
-  </section>
+    <section class="restaurants">
+      <h2>Choose a Restaurant</h2>
+      <div class="restaurant" onclick="loadMenu('Restaurant A')">
+        <h3>Restaurant A</h3>
+      </div>
+      <div class="restaurant" onclick="loadMenu('Restaurant B')">
+        <h3>Restaurant B</h3>
+      </div>
+      <div class="restaurant" onclick="loadMenu('Restaurant C')">
+        <h3>Restaurant C</h3>
+      </div>
+    </section>
 
-  <section id="menu" class="menu">
-    <h2>Menu</h2>
-    <div class="menu-items" id="menu-items"></div>
-  </section>
+    <footer id="contact">
+      <p>Contact Us: https://foodservices.utoronto.ca/</p>
+      <p>&copy; Made with ♥ by Avery Lor</p>
+    </footer>
 
-  <section id="cart" class="cart">
-    <h2>Your Cart</h2>
-    <ul id="cart-list"></ul>
-    <button id="checkout-button">Checkout</button>
-  </section>
-
-  <footer id="contact">
-    <p>Contact Us: https://foodservices.utoronto.ca/</p>
-    <p>&copy; Made with ♥ by Avery Lor</p>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
