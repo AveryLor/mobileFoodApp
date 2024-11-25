@@ -174,33 +174,10 @@ const restaurantMenus = {
   ],
 };
 
-function renderProducts(restaurant) {
-  const menuItemsContainer = document.getElementById("menu-items");
-  menuItemsContainer.innerHTML = ""; // Clear any existing products
-
-  const menu = restaurantMenus[restaurant] || [];
-
-  menu.forEach((product) => {
-    const productElement = document.createElement("div");
-    productElement.classList.add("menu-item");
-
-    // Adding the "Add to Cart" button with onclick event to add the item to the cart
-    productElement.innerHTML = `
-      <h3>${product.name}</h3>
-      <p>${product.description}</p>
-      <span>$${product.price.toFixed(2)}</span>
-      <button onclick="addToCart(${product.id})">Add to Cart</button>
-    `;
-
-    menuItemsContainer.appendChild(productElement);
-  });
-}
-
-/// Cart functionality
 let cart = [];
 
 function addToCart(productId) {
-  // Get the currently selected restaurant (from the UI or stored data)
+  // Get the currently selected restaurant
   const restaurant = document
     .querySelector(".category.selected")
     ?.id.split("-")[1];
@@ -218,7 +195,8 @@ function updateCart() {
   const cartList = document.getElementById("cart-list");
   const cartCount = document.getElementById("cart-count");
 
-  cartList.innerHTML = ""; // Clear the cart list
+  // Clear the cart list and update it with the current items
+  cartList.innerHTML = "";
 
   cart.forEach((item) => {
     const listItem = document.createElement("li");
@@ -226,21 +204,42 @@ function updateCart() {
     cartList.appendChild(listItem);
   });
 
+  // Update the cart count
   cartCount.textContent = cart.length;
+}
+
+// Function to render products on the menu
+function renderProducts(restaurant) {
+  const menuItemsContainer = document.getElementById("menu-items");
+  menuItemsContainer.innerHTML = ""; // Clear any existing products
+
+  const menu = restaurantMenus[restaurant] || [];
+
+  menu.forEach((product) => {
+    const productElement = document.createElement("div");
+    productElement.classList.add("menu-item");
+
+    productElement.innerHTML = `
+      <h3>${product.name}</h3>
+      <p>${product.description}</p>
+      <span>$${product.price.toFixed(2)}</span>
+      <button onclick="addToCart(${product.id})">Add to Cart</button>
+    `;
+
+    menuItemsContainer.appendChild(productElement);
+  });
 }
 
 // Checkout functionality
 function checkout() {
   if (cart.length > 0) {
-    // Simulate sending an email with a randomly generated number
-    const randomNumber = Math.floor(Math.random() * 1000000); // Random number for the email
+    const randomNumber = Math.floor(Math.random() * 1000000);
     alert(
       `Your order has been placed. Check your email for confirmation number: ${randomNumber}`
     );
 
-    // Clear the cart after checkout
-    cart = [];
-    updateCart();
+    cart = []; // Clear the cart
+    updateCart(); // Update the cart display
   } else {
     alert(
       "Your cart is empty. Please add some items to the cart before checkout."
@@ -250,35 +249,28 @@ function checkout() {
 
 // Default restaurant to display menu for (Restaurant A)
 function selectRestaurant(restaurant) {
-  // Remove 'selected' class from all categories
   document
     .querySelectorAll(".category")
-    .forEach((cat) => cat.classList.remove("selected"));
-
-  // Add 'selected' class to clicked category
+    .forEach((cart) => cart.classList.remove("selected"));
   document
     .getElementById(`restaurant-${restaurant.toLowerCase()}-btn`)
     .parentElement.classList.add("selected");
-
-  // Render menu for selected restaurant
   renderProducts(restaurant);
 }
 
-// Initial render with Restaurant A's menu
-selectRestaurant("A");
-
 // Event listeners for switching menus
-document.getElementById("restaurant-a-btn").addEventListener("click", () => {
-  selectRestaurant("A");
-});
-
-document.getElementById("restaurant-b-btn").addEventListener("click", () => {
-  selectRestaurant("B");
-});
-
-document.getElementById("restaurant-c-btn").addEventListener("click", () => {
-  selectRestaurant("C");
-});
+document
+  .getElementById("restaurant-a-btn")
+  .addEventListener("click", () => selectRestaurant("A"));
+document
+  .getElementById("restaurant-b-btn")
+  .addEventListener("click", () => selectRestaurant("B"));
+document
+  .getElementById("restaurant-c-btn")
+  .addEventListener("click", () => selectRestaurant("C"));
 
 // Checkout button
 document.getElementById("checkout-button").addEventListener("click", checkout);
+
+// Initial render with Restaurant A's menu
+selectRestaurant("A");
