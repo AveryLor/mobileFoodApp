@@ -1,6 +1,6 @@
 # 🍴 UofT Food Order
 
-A simple and responsive food ordering web application designed for the University of Toronto community.
+A simple and responsive food ordering web application designed for the University of Toronto community. Created for **APS111 CDS**.
 
 ---
 
