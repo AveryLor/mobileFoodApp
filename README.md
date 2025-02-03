@@ -4,6 +4,8 @@ A simple and responsive food ordering web application designed for the Universit
 
 ---
 
+Link: https://uoftfoodorderapp.averylor.me/
+
 ## 🌟 Features
 - **Menu Browsing**: Explore a categorized menu with options for Breakfast, Lunch, and Dinner.
 - **Cart Functionality**: Add items to your cart and view your order summary.
